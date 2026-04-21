@@ -1,39 +1,74 @@
-# 🚦 Traffic Monitoring Dashboard
+# Object Detection and Tracking with YOLOv8 and ByteTrack
 
-This repository contains the **graduation thesis project** on traffic analysis using computer vision techniques.  
-It integrates **YOLOv8**, **ByteTrack**, **SAHI**, and a **Speed Estimation module** to detect, track, and analyze vehicles in traffic scenes.  
+> A project for detecting, estimating speed, and counting vehicles in videos using YOLOv8 and ByteTrack.
 
----
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## ✨ Features
-- **Object Detection**: Vehicle detection using *YOLOv8 finetuning*  
-- **Tracking**: Multi-object tracking with *ByteTrack*  
-- **Small Object Handling**: *SAHI* (Slicing Aided Hyper Inference) for better detection on small objects  
-- **Speed Estimation**: Estimate the moving speed of each vehicle  
-- **Web Dashboard**:  
-  - Video playback with overlay (bounding box, ID, speed)  
-  - Real-time vehicle counting & monitoring  
-  - Traffic peak-time chart  
-  - CSV export logs
+## Why This Exists
 
----
-## 📜 Thesis Information
+This project addresses the need for accurate and efficient vehicle detection and tracking in real-time video feeds. It leverages the power of YOLOv8 for object detection and ByteTrack for effective tracking, making it suitable for various applications in traffic monitoring and automated surveillance.
 
-- **Thesis Title**: *Object Detection and Tracking for Traffic Analysis*  
-- **Year**: 2025  
+## Quick Start
 
-**Methodology:**  
-- **YOLOv8** for object detection  
-- **ByteTrack** for multi-object tracking  
-- **SAHI** for small object handling  
-- **Speed Estimation** for calculating vehicle velocity  
+Get started with just a few commands:
 
-**Applications:**  
-- Smart city solutions  
-- Traffic monitoring and management  
-- Vehicle counting and analysis  
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Huyy1510/Research-and-Using-Object-Detection-and-Object-Tracking.git
+   cd Research-and-Using-Object-Detection-and-Object-Tracking
+   ```
 
----
-## 📝 License
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-This project is for academic purposes only.
+3. Run the application:
+   ```bash
+   python app.py --input <video_file> --output <output_file>
+   ```
+
+## Installation
+
+**Prerequisites**: Ensure you have Python 3.8+ and pip installed.
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Huyy1510/Research-and-Using-Object-Detection-and-Object-Tracking.git
+   cd Research-and-Using-Object-Detection-and-Object-Tracking
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+### Basic Example
+
+To run the object detection and tracking on a video file:
+
+```bash
+python app.py --input path/to/video.mp4 --output path/to/output.mp4
+```
+
+### Configuration Options
+
+| Option     | Type    | Default          | Description                                      |
+|------------|---------|------------------|--------------------------------------------------|
+| `--input`  | string  | `None`           | Path to the input video file.                    |
+| `--output` | string  | `None`           | Path to save the output video with detections.   |
+| `--model`  | string  | `yolov8.pt`      | Path to the YOLOv8 model weights.                |
+
+## API Reference
+
+For more details on the available functions and their parameters, refer to the source code in the repository.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on contributing to this project.
+
+## License
+
+MIT © [Huyy1510](https://github.com/Huyy1510)
