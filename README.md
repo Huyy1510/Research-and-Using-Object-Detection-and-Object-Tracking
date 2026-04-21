@@ -1,65 +1,72 @@
 # Research and Using Object Detection and Object Tracking
 
-This repository demonstrates the application of YOLOv8 and ByteTrack for detecting, estimating the speed, and counting vehicles in video footage.
+> This project leverages YOLOv8 and ByteTrack for vehicle detection, speed estimation, and counting in video footage.
 
-## Why This Project Exists
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-In the realm of intelligent transportation systems, accurately detecting and tracking vehicles is crucial for traffic management, urban planning, and safety. This project leverages state-of-the-art object detection and tracking algorithms to provide real-time insights into vehicular movement.
+## Why This Exists
+
+This project addresses the need for efficient and accurate vehicle detection and tracking in real-time video streams. By utilizing state-of-the-art algorithms, it simplifies the process of monitoring traffic and analyzing vehicle behavior.
 
 ## Quick Start
 
-To get started quickly, follow these steps:
-
-### Prerequisites
-
-- Python 3.8+
-- OpenCV
-- TensorFlow
-- YOLOv8 model files
+To get started quickly, follow these steps to install the necessary dependencies and run the application.
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Huyy1510/Research-and-Using-Object-Detection-and-Object-Tracking.git
-   cd Research-and-Using-Object-Detection-and-Object-Tracking
-   ```
+**Prerequisites**: Python 3.8+, pip
 
-2. Install required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+1. **Install the Ultralytics package**:
 
-3. Download the YOLOv8 model weights. You can find the weights [here](https://github.com/ultralytics/yolov5/releases).
-
-### Running the Application
-
-To run the object detection and tracking on a video file, use the following command:
 ```bash
-python main.py --source path_to_your_video.mp4
+pip install ultralytics
 ```
 
-Replace `path_to_your_video.mp4` with the path to your video file.
+2. **Clone the repository**:
+
+```bash
+git clone https://github.com/Huyy1510/Research-and-Using-Object-Detection-and-Object-Tracking.git
+cd Research-and-Using-Object-Detection-and-Object-Tracking
+```
+
+3. **Install additional dependencies** (if required):
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
 
-- The application will process the video and display the detected vehicles with bounding boxes.
-- Speed estimation and vehicle counting will be displayed on the video feed.
+### Basic Example
+
+To run the object detection and tracking on a video file, execute the following command:
+
+```bash
+python app.py --source path/to/video.mp4
+```
+
+### Configuration
+
+You can configure the settings in `bytetrack.yaml`. Key options include:
+
+| Option          | Type    | Default      | Description                                |
+|-----------------|---------|--------------|--------------------------------------------|
+| `video_source`  | string  | `0`          | Source of the video (0 for webcam)        |
+| `output_format` | string  | `output.mp4` | Name of the output video file              |
+| `confidence`    | float   | `0.25`       | Confidence threshold for detection         |
+
+### Advanced Usage
+
+For advanced configuration, modify the parameters in `bytetrack.yaml` to tailor the detection and tracking behavior to your needs.
 
 ## API Reference
 
-- `main.py`: Entry point for running the object detection and tracking.
-- `yolo_model.py`: Contains functions for loading and running the YOLO model.
-- `tracker.py`: Implements tracking logic using ByteTrack.
+See [full API reference →](https://github.com/Huyy1510/Research-and-Using-Object-Detection-and-Object-Tracking)
 
 ## Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for more details on how to contribute to this project.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any inquiries, please reach out to [Huyy1510](https://github.com/Huyy1510).
+MIT © [Huyy1510](https://github.com/Huyy1510)
