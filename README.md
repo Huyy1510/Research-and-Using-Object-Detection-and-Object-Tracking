@@ -1,16 +1,23 @@
-# Object Detection and Tracking with YOLOv8 and ByteTrack
+# Research and Using Object Detection and Object Tracking
 
-> A project for detecting, estimating speed, and counting vehicles in videos using YOLOv8 and ByteTrack.
+This repository demonstrates the application of YOLOv8 and ByteTrack for detecting, estimating the speed, and counting vehicles in video footage.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Why This Project Exists
 
-## Why This Exists
-
-This project addresses the need for accurate and efficient vehicle detection and tracking in real-time video feeds. It leverages the power of YOLOv8 for object detection and ByteTrack for effective tracking, making it suitable for various applications in traffic monitoring and automated surveillance.
+In the realm of intelligent transportation systems, accurately detecting and tracking vehicles is crucial for traffic management, urban planning, and safety. This project leverages state-of-the-art object detection and tracking algorithms to provide real-time insights into vehicular movement.
 
 ## Quick Start
 
-Get started with just a few commands:
+To get started quickly, follow these steps:
+
+### Prerequisites
+
+- Python 3.8+
+- OpenCV
+- TensorFlow
+- YOLOv8 model files
+
+### Installation
 
 1. Clone the repository:
    ```bash
@@ -18,57 +25,41 @@ Get started with just a few commands:
    cd Research-and-Using-Object-Detection-and-Object-Tracking
    ```
 
-2. Install the required dependencies:
+2. Install required packages:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the application:
-   ```bash
-   python app.py --input <video_file> --output <output_file>
-   ```
+3. Download the YOLOv8 model weights. You can find the weights [here](https://github.com/ultralytics/yolov5/releases).
 
-## Installation
+### Running the Application
 
-**Prerequisites**: Ensure you have Python 3.8+ and pip installed.
+To run the object detection and tracking on a video file, use the following command:
+```bash
+python main.py --source path_to_your_video.mp4
+```
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Huyy1510/Research-and-Using-Object-Detection-and-Object-Tracking.git
-   cd Research-and-Using-Object-Detection-and-Object-Tracking
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+Replace `path_to_your_video.mp4` with the path to your video file.
 
 ## Usage
 
-### Basic Example
-
-To run the object detection and tracking on a video file:
-
-```bash
-python app.py --input path/to/video.mp4 --output path/to/output.mp4
-```
-
-### Configuration Options
-
-| Option     | Type    | Default          | Description                                      |
-|------------|---------|------------------|--------------------------------------------------|
-| `--input`  | string  | `None`           | Path to the input video file.                    |
-| `--output` | string  | `None`           | Path to save the output video with detections.   |
-| `--model`  | string  | `yolov8.pt`      | Path to the YOLOv8 model weights.                |
+- The application will process the video and display the detected vehicles with bounding boxes.
+- Speed estimation and vehicle counting will be displayed on the video feed.
 
 ## API Reference
 
-For more details on the available functions and their parameters, refer to the source code in the repository.
+- `main.py`: Entry point for running the object detection and tracking.
+- `yolo_model.py`: Contains functions for loading and running the YOLO model.
+- `tracker.py`: Implements tracking logic using ByteTrack.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on contributing to this project.
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for more details on how to contribute to this project.
 
 ## License
 
-MIT © [Huyy1510](https://github.com/Huyy1510)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries, please reach out to [Huyy1510](https://github.com/Huyy1510).
